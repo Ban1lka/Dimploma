@@ -1521,6 +1521,8 @@ button[type="submit"]:hover {
 @media screen and (max-width: 400px){
     .header-lang {
         top: 30%;
+        opacity: 1;
+        overflow:visible;
     }
     .header__item{
         margin-bottom: 0;
