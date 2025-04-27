@@ -1524,7 +1524,7 @@ button[type="submit"]:hover {
         opacity: 1;
         overflow:visible;
     }
-    .header__item{
+    .header__item:last-child {
         margin-bottom: 0;
     }
 }
