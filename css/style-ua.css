@@ -1519,12 +1519,6 @@ button[type="submit"]:hover {
 }
 
 @media screen and (max-width: 400px){
-    ul .header-lang {
-        top: 30%;
-        position: relative;
-        opacity: 1;
-        overflow:visible;
-    }
     .header__item{
         margin-bottom: 0;
     }
