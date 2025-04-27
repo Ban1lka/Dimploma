@@ -1522,6 +1522,9 @@ button[type="submit"]:hover {
     .header-lang {
         top: 30%;
     }
+    .header__item{
+        margin-bottom: 0;
+    }
 }
 
 /* Media end */
