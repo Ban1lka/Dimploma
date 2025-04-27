@@ -1518,6 +1518,10 @@ button[type="submit"]:hover {
     }
 }
 
-
+@media screen and (max-width: 300px){
+    .header-lang {
+        top: 30%;
+    }
+}
 
 /* Media end */
