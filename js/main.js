@@ -266,15 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-console.table(
-    Object.keys(localStorage)
-      .filter(key => key.includes('_email'))
-      .map(key => {
-        return {
-          Email: localStorage.getItem(key)
-        };
-      })
-  );
+
 
 
 
