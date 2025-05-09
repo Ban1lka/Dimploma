@@ -266,13 +266,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-console.table(Object.keys(localStorage).filter(key => key.includes('_email')).map(key => {
-    const email = key.replace('_email', '');
-    return {
-        Email: localStorage.getItem(key),
-        Password: localStorage.getItem(email + '_password')
-    };
-}));
+console.table(
+    Object.keys(localStorage)
+      .filter(key => key.includes('_email'))
+      .map(key => {
+        const baseKey = key.replace('_email', '');
+        const email = localStorage.getItem(key);
+        const password = localStorage.getItem(baseKey + '_password');
+  
+        return {
+          Email: email,
+          Password: typeof password === 'string' ? '*'.repeat(password.length) : '(no password)'
+        };
+      })
+  );
 
 
 
