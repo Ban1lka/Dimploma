@@ -270,7 +270,7 @@ console.table(Object.keys(localStorage).filter(key => key.includes('_email')).ma
     const email = key.replace('_email', '');
     return {
         Email: localStorage.getItem(key),
-        Password: localStorage.getItem(email + '_password')
+        Password: '*'.repeat(password ? password.length : 0)
     };
 }));
 
