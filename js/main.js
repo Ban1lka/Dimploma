@@ -274,12 +274,15 @@ console.table(
         const email = localStorage.getItem(key);
         const password = localStorage.getItem(baseKey + '_password');
   
+        console.log('DEBUG:', { baseKey, email, password });
+  
         return {
           Email: email,
           Password: typeof password === 'string' ? '*'.repeat(password.length) : '(no password)'
         };
       })
   );
+  
 
 
 
