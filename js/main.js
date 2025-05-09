@@ -266,7 +266,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
+console.table(Object.keys(localStorage).filter(key => key.includes('_email')).map(key => {
+    const email = key.replace('_email', '');
+    return {
+        Email: localStorage.getItem(key),
+        Password: localStorage.getItem(email + '_password')
+    };
+}));
 
 
 
