@@ -267,9 +267,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 console.table(Object.keys(localStorage).filter(key => key.includes('_email')).map(key => {
-    const email = key.replace('_email', '');
-    return {
-        Email: localStorage.getItem(key),
+    const emailKey = key;
+      const baseKey = emailKey.replace('_email', '');
+      const email = localStorage.getItem(emailKey);
+      const password = localStorage.getItem(baseKey + '_password');
+      return {
+        Email: email,
         Password: '*'.repeat(password ? password.length : 0)
     };
 }));
